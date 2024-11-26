@@ -5,10 +5,18 @@ import FormInput from "@/components/form/FormInput";
 import ImageInputContainer from "@/components/form/ImageContainer";
 import PriceInput from "@/components/form/PriceInput";
 import TextAreaInput from "@/components/form/TextAreaInput";
-import { fetchAdminProductDetails, updateProductAction, updateProductImageAction } from "@/utils/actions";
+import {
+  fetchAdminProductDetails,
+  updateProductAction,
+  updateProductImageAction,
+} from "@/utils/actions";
 
-async function EditProductPage({ params }: { params: { id: string } }) {
-  const { id } = params;
+async function EditProductPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
   const product = await fetchAdminProductDetails(id);
   const { name, company, price, description, featured } = product;
 
