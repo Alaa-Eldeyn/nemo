@@ -31,7 +31,7 @@ export function SubmitButton({
     >
       {pending ? (
         <>
-          <IoReload className="mr-2 h-4 w-4 animate-spin" />
+          <IoReload className="mr-2 !size-4 animate-spin" />
           Please wait...
         </>
       ) : (
@@ -64,7 +64,7 @@ export const IconButton = ({ actionType }: { actionType: actionType }) => {
       variant="link"
       className="p-2 cursor-pointer"
     >
-      {pending ? <IoReload className=" animate-spin" /> : renderIcon()}
+      {pending ? <IoReload className="!size-4 animate-spin" /> : renderIcon()}
     </Button>
   );
 };
@@ -95,12 +95,22 @@ export const CardSubmitButton = ({ isFavorite }: { isFavorite: boolean }) => {
       className=" p-2 cursor-pointer"
     >
       {pending ? (
-        <IoReload className=" animate-spin" />
+        <IoReload className="!size-4 animate-spin" />
       ) : isFavorite ? (
         <FaHeart />
       ) : (
         <FaRegHeart />
       )}
     </Button>
+  );
+};
+
+export const ProductSignInButton = () => {
+  return (
+    <SignInButton mode="modal">
+      <Button type="button" size="default" className="mt-8">
+        يرجى تسجيل الدخول
+      </Button>
+    </SignInButton>
   );
 };

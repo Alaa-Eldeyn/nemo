@@ -4,7 +4,7 @@ import { ThemeProvider } from "./theme-provider";
 
 function Providers({ children }: { children: React.ReactNode }) {
   return <>
-    <Toaster/>
+    <Toaster />
     <ThemeProvider
       attribute={"class"}
       defaultTheme="dark"

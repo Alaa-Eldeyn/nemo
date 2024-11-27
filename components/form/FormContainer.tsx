@@ -16,9 +16,14 @@ function FormContainer({
 }) {
   const [error, formAction] = useActionState(action, initialState);
   const { toast } = useToast();
+
   useEffect(() => {
-    if (error) {
-      toast({ description: error.message });
+    if (error?.message !== "") {
+      toast({
+        description: error.message,
+        className:
+          "bottom-0 left-0 flex fixed md:max-w-[420px] md:bottom-4 md:left-4 md:justify-end md:gap-4",
+      });
     }
   }, [error]);
   return <form action={formAction}>{children}</form>;
