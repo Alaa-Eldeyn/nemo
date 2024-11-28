@@ -13,7 +13,7 @@ const stripePromise = loadStripe(
 );
 
 export default function CheckoutPage() {
-  const searchParams = useSearchParams();
+  const searchParams = new URLSearchParams();
 
   const orderId = searchParams.get("orderId");
   const cartId = searchParams.get("cartId");
@@ -24,7 +24,7 @@ export default function CheckoutPage() {
       cartId: cartId,
     });
     return response.data.clientSecret;
-  }, [searchParams]);
+  }, []);
 
   const options = { fetchClientSecret };
 
