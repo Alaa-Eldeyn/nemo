@@ -1,4 +1,5 @@
 "use client";
+
 import axios from "axios";
 import { useSearchParams } from "next/navigation";
 import React, { Suspense, useCallback } from "react";
@@ -12,7 +13,7 @@ const stripePromise = loadStripe(
   process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string
 );
 
-export default function CheckoutPage() {
+function CheckoutContent() {
   const searchParams = useSearchParams();
 
   const orderId = searchParams.get("orderId");
@@ -24,7 +25,7 @@ export default function CheckoutPage() {
       cartId: cartId,
     });
     return response.data.clientSecret;
-  }, []);
+  }, [orderId, cartId]);
 
   const options = { fetchClientSecret };
 
@@ -36,5 +37,13 @@ export default function CheckoutPage() {
         </EmbeddedCheckoutProvider>
       </Suspense>
     </div>
+  );
+}
+
+export default function CheckoutPage() {
+  return (
+    <Suspense>
+      <CheckoutContent />;
+    </Suspense>
   );
 }
