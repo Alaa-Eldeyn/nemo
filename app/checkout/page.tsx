@@ -8,7 +8,7 @@ import {
   EmbeddedCheckout,
 } from "@stripe/react-stripe-js";
 
-const stripePromise = loadStripe(
+const stripePromise = await loadStripe(
   process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string
 );
 
@@ -25,17 +25,17 @@ export default function CheckoutPage() {
       cartId: cartId,
     });
     return response.data.clientSecret;
-  }, []);
+  }, [orderId, cartId]);
 
   const options = { fetchClientSecret };
 
   return (
-    <Suspense>
-      <div id="checkout">
+    <div id="checkout">
+      <Suspense>
         <EmbeddedCheckoutProvider stripe={stripePromise} options={options}>
           <EmbeddedCheckout />
         </EmbeddedCheckoutProvider>
-      </div>
-    </Suspense>
+      </Suspense>
+    </div>
   );
 }
