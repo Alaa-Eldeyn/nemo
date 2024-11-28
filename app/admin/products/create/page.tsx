@@ -16,20 +16,20 @@ function CreateProduct() {
 
   return (
     <section>
-      <h1 className="text-2xl font-semibold mb-8 capitalize">create product</h1>
+      <h1 className="text-2xl font-semibold mb-8 capitalize">إضافة منتج</h1>
       <div className="border p-8 rounded-md">
         <FormContainer action={createProductAction}>
           <div className="grid gap-4 md:grid-cols-2 my-4">
             <FormInput
               type="text"
               name="name"
-              label="product name"
+              label="اسم المنتج"
               defaultValue={name}
             />
             <FormInput
               type="text"
               name="company"
-              label="company"
+              label="الشركة"
               defaultValue={company}
             />
             <PriceInput />
@@ -37,13 +37,13 @@ function CreateProduct() {
           </div>
           <TextAreaInput
             name="description"
-            labelText="product description"
+            labelText="وصف المنتج"
             defaultValue={description}
           />
           <div className="mt-6">
-            <CheckboxInput name="featured" label="featured" />
+            <CheckboxInput name="featured" label="مميز" />
           </div>
-          <SubmitButton text="Create Product" className="mt-8" />
+          <SubmitButton text="إضافة منتج" className="mt-8" />
         </FormContainer>
       </div>
     </section>

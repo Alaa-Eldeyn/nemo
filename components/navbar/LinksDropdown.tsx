@@ -29,13 +29,13 @@ async function LinksDropdown() {
         <SignedOut>
           <DropdownMenuItem>
             <SignInButton mode="modal">
-              <button className="w-full text-left">تسجيل الدخول</button>
+              <button className="w-full">تسجيل الدخول</button>
             </SignInButton>
           </DropdownMenuItem>
           <DropdownMenuSeparator />
           <DropdownMenuItem>
             <SignUpButton mode="modal">
-              <button className="w-full text-left">حساب جديد</button>
+              <button className="w-full">حساب جديد</button>
             </SignUpButton>
           </DropdownMenuItem>
         </SignedOut>
@@ -44,7 +44,7 @@ async function LinksDropdown() {
             if (link.label === "dashboard" && !isAdmin) return null;
             return (
               <DropdownMenuItem key={link.href}>
-                <Link href={link.href} className="capitalize w-full">
+                <Link href={link.href} className="capitalize w-full ">
                   {link.label}
                 </Link>
               </DropdownMenuItem>

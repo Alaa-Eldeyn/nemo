@@ -38,8 +38,8 @@ function SubmitReview({ productId }: { productId: string }) {
             <RatingInput name="rating" />
             <TextAreaInput
               name="comment"
-              labelText="feedback"
-              defaultValue="Outstanding product!!!"
+              labelText="التقييم"
+              defaultValue="منتج رائع !"
             />
             <SubmitButton className="mt-4" />
           </FormContainer>

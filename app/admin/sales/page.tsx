@@ -16,15 +16,15 @@ async function SalesPage() {
   return (
     <div>
       <Table>
-        <TableCaption>Total orders : {orders.length}</TableCaption>
+        <TableCaption>إجمالى الطلبيات : {orders.length}</TableCaption>
         <TableHeader>
           <TableRow>
-            <TableHead>Email</TableHead>
-            <TableHead>Products</TableHead>
-            <TableHead>Order Total</TableHead>
-            <TableHead>Tax</TableHead>
-            <TableHead>Shipping</TableHead>
-            <TableHead>Date</TableHead>
+            <TableHead className="!text-right">الايميل</TableHead>
+            <TableHead className="!text-right">عدد المنتجات</TableHead>
+            <TableHead className="!text-right">الإجمالى</TableHead>
+            <TableHead className="!text-right">الضرائب</TableHead>
+            <TableHead className="!text-right">الشحن</TableHead>
+            <TableHead className="!text-right">التاريخ</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -41,12 +41,20 @@ async function SalesPage() {
 
             return (
               <TableRow key={id}>
-                <TableCell>{email}</TableCell>
-                <TableCell>{products}</TableCell>
-                <TableCell>{formatCurrency(orderTotal)}</TableCell>
-                <TableCell>{formatCurrency(tax)}</TableCell>
-                <TableCell>{formatCurrency(shipping)}</TableCell>
-                <TableCell>{formatDate(createdAt)}</TableCell>
+                <TableCell className="!text-right">{email}</TableCell>
+                <TableCell className="!text-right">{products}</TableCell>
+                <TableCell className="!text-right">
+                  {formatCurrency(orderTotal)}
+                </TableCell>
+                <TableCell className="!text-right">
+                  {formatCurrency(tax)}
+                </TableCell>
+                <TableCell className="!text-right">
+                  {formatCurrency(shipping)}
+                </TableCell>
+                <TableCell className="!text-right">
+                  {formatDate(createdAt)}
+                </TableCell>
               </TableRow>
             );
           })}

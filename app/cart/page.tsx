@@ -11,7 +11,7 @@ async function CartPage() {
   const { cartItems, currentCart } = await updateCart(previousCart);
 
   if (cartItems.length === 0) {
-    return <SectionTitle text="لم تضف إي منتج بعد ..." />;
+    return <SectionTitle text="لم تضف أي منتج بعد ..." />;
   }
   return (
     <>

@@ -16,17 +16,17 @@ async function OrdersPage() {
 
   return (
     <>
-      <SectionTitle text="Your Orders" />
+      <SectionTitle text="طلبياتك" />
       <div>
         <Table>
-          <TableCaption>Total orders : {orders.length}</TableCaption>
+          <TableCaption>مجموع الطلبيات : {orders.length}</TableCaption>
           <TableHeader>
             <TableRow>
-              <TableHead>Products</TableHead>
-              <TableHead>Order Total</TableHead>
-              <TableHead>Tax</TableHead>
-              <TableHead>Shipping</TableHead>
-              <TableHead>Date</TableHead>
+              <TableHead className="!text-right">المنتجات</TableHead>
+              <TableHead className="!text-right">الإجمالى</TableHead>
+              <TableHead className="!text-right">الضرائب</TableHead>
+              <TableHead className="!text-right">الشحن</TableHead>
+              <TableHead className="!text-right">التاريخ</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -35,11 +35,19 @@ async function OrdersPage() {
                 order;
               return (
                 <TableRow key={id}>
-                  <TableCell>{products}</TableCell>
-                  <TableCell>{formatCurrency(orderTotal)}</TableCell>
-                  <TableCell>{formatCurrency(tax)}</TableCell>
-                  <TableCell>{formatCurrency(shipping)}</TableCell>
-                  <TableCell>{formatDate(createdAt)}</TableCell>
+                  <TableCell className="!text-right">{products}</TableCell>
+                  <TableCell className="!text-right">
+                    {formatCurrency(orderTotal)}
+                  </TableCell>
+                  <TableCell className="!text-right">
+                    {formatCurrency(tax)}
+                  </TableCell>
+                  <TableCell className="!text-right">
+                    {formatCurrency(shipping)}
+                  </TableCell>
+                  <TableCell className="!text-right">
+                    {formatDate(createdAt)}
+                  </TableCell>
                 </TableRow>
               );
             })}

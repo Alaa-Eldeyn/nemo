@@ -29,7 +29,7 @@ async function EditProductPage({
             action={updateProductImageAction}
             name={name}
             image={product.image}
-            text="update image"
+            text="تغيير الصورة"
           >
             <input type="hidden" name="id" value={id} />
             <input type="hidden" name="url" value={product.image} />
@@ -41,13 +41,13 @@ async function EditProductPage({
             <FormInput
               type="text"
               name="name"
-              label="product name"
+              label="اسم المنتج"
               defaultValue={name}
             />
             <FormInput
               type="text"
               name="company"
-              label="company"
+              label="الشركة"
               defaultValue={company}
             />
 
@@ -55,17 +55,17 @@ async function EditProductPage({
           </div>
           <TextAreaInput
             name="description"
-            labelText="product description"
+            labelText="وصف المنتج"
             defaultValue={description}
           />
           <div className="mt-6">
             <CheckboxInput
               name="featured"
-              label="featured"
+              label="مميز"
               defaultChecked={featured}
             />
           </div>
-          <SubmitButton text="update product" className="mt-8" />
+          <SubmitButton text="تحديث المنتج" className="mt-8" />
         </FormContainer>
       </div>
     </section>
