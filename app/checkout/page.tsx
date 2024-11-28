@@ -1,6 +1,4 @@
 "use client";
-
-export const dynamic = "force-dynamic";
 import axios from "axios";
 import { useSearchParams } from "next/navigation";
 import React, { Suspense, useCallback } from "react";
@@ -32,12 +30,12 @@ export default function CheckoutPage() {
   const options = { fetchClientSecret };
 
   return (
-    <div id="checkout">
-      <Suspense>
+    <Suspense>
+      <div id="checkout">
         <EmbeddedCheckoutProvider stripe={stripePromise} options={options}>
           <EmbeddedCheckout />
         </EmbeddedCheckoutProvider>
-      </Suspense>
-    </div>
+      </div>
+    </Suspense>
   );
 }
