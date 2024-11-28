@@ -29,11 +29,9 @@ function CheckoutContent() {
   const options = { fetchClientSecret };
 
   return (
-    <div id="checkout">
       <EmbeddedCheckoutProvider stripe={stripePromise} options={options}>
         <EmbeddedCheckout />
       </EmbeddedCheckoutProvider>
-    </div>
   );
 }
 
