@@ -12,7 +12,7 @@ const stripePromise = loadStripe(
   process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string
 );
 
-function CheckoutContent() {
+export default function CheckoutPage() {
   const searchParams = useSearchParams();
 
   const orderId = searchParams.get("orderId");
@@ -24,23 +24,17 @@ function CheckoutContent() {
       cartId: cartId,
     });
     return response.data.clientSecret;
-  }, []);
+  }, [searchParams]);
 
   const options = { fetchClientSecret };
 
   return (
     <div id="checkout">
-      <EmbeddedCheckoutProvider stripe={stripePromise} options={options}>
-        <EmbeddedCheckout />
-      </EmbeddedCheckoutProvider>
+      <Suspense>
+        <EmbeddedCheckoutProvider stripe={stripePromise} options={options}>
+          <EmbeddedCheckout />
+        </EmbeddedCheckoutProvider>
+      </Suspense>
     </div>
-  );
-}
-
-export default function CheckoutPage() {
-  return (
-    <Suspense fallback={<div>جارى التحميل...</div>}>
-      <CheckoutContent />
-    </Suspense>
   );
 }
