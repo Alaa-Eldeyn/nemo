@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar/Navbar";
 import Container from "@/components/global/Container";
 import Providers from "./Providers";
 import { ClerkProvider } from "@clerk/nextjs";
+import { AuroraBackground } from "@/components/ui/aurora-background";
 
 const tajawal = localFont({
   src: "./fonts/Tajawal-Bold.woff",
@@ -32,6 +33,8 @@ export default function RootLayout({
       <html lang="ar" dir="rtl" suppressHydrationWarning>
         <body className={`${tajawal.variable} ${amiri.variable} antialiased`}>
           <Providers>
+            <AuroraBackground />
+
             <Navbar />
             <Container className="py-20">{children}</Container>
           </Providers>

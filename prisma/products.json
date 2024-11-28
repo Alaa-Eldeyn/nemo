@@ -1,38 +1,74 @@
 [
   {
-    "name": "avant-garde lamp",
-    "company": "Modenza",
-    "description": "Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic chillwave trust fund. Viral typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo everyday carry kitsch pitchfork chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge",
+    "name": "سمكة الزينة الذهبية",
+    "company": "Goldfish",
+    "description": "سمكة الزينة الذهبية هي واحدة من أشهر أسماك الزينة. تتميز بلونها الذهبي اللامع وشكلها الجميل. تعيش في المياه العذبة وتحتاج إلى درجة حرارة بين 18-22 درجة مئوية.",
     "featured": true,
-    "image": "https://images.pexels.com/photos/943150/pexels-photo-943150.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "price": 100,
-    "clerkId": "clerkId"
+    "image": "https://images.pexels.com/photos/6060211/pexels-photo-6060211.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 50,
+    "clerkId": "seller123"
   },
   {
-    "name": "chic chair",
-    "company": "Luxora",
-    "description": "Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic chillwave trust fund. Viral typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo everyday carry kitsch pitchfork chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge",
+    "name": "سمكة الملاك",
+    "company": "Angelfish",
+    "description": "سمكة الملاك تتميز بشكلها المسطح وزعانفها الطويلة التي تشبه الأجنحة. تُعتبر من أسماك الزينة الهادئة وتعيش في المياه العذبة.",
     "featured": true,
-    "image": "https://images.pexels.com/photos/5705090/pexels-photo-5705090.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "price": 200,
-    "clerkId": "clerkId"
+    "image": "https://images.pexels.com/photos/5546935/pexels-photo-5546935.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 70,
+    "clerkId": "seller124"
   },
   {
-    "name": "comfy bed",
-    "company": "Homestead",
-    "description": "Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic chillwave trust fund. Viral typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo everyday carry kitsch pitchfork chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge",
+    "name": "سمكة الجوبي",
+    "company": "Guppy",
+    "description": "سمكة الجوبي صغيرة الحجم ومناسبة للمبتدئين. تتميز بألوانها الزاهية وشكلها الجميل. تحتاج إلى بيئة نظيفة وأكسجين جيد في الماء.",
     "featured": true,
-    "image": "https://images.pexels.com/photos/1034584/pexels-photo-1034584.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "price": 300,
-    "clerkId": "clerkId"
+    "image": "https://images.pexels.com/photos/18435511/pexels-photo-18435511/free-photo-of-small-fish-in-aquarium.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 30,
+    "clerkId": "seller125"
   },
   {
-    "name": "contemporary sofa",
-    "company": "Comfora",
-    "description": "Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic chillwave trust fund. Viral typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo everyday carry kitsch pitchfork chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge",
+    "name": "سمكة البلطي الأفريقي",
+    "company": "African Cichlid",
+    "description": "سمكة البلطي الأفريقي تتميز بألوانها الزاهية وأشكالها الفريدة. تحتاج إلى مياه معتدلة الملوحة وتعتبر من الأسماك النشيطة.",
     "featured": false,
-    "image": "https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "price": 400,
-    "clerkId": "clerkId"
+    "image": "https://images.pexels.com/photos/1145274/pexels-photo-1145274.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 80,
+    "clerkId": "seller126"
+  },
+  {
+    "name": "سمكة النيون تترا",
+    "company": "Neon Tetra",
+    "description": "سمكة صغيرة تتميز بشريط مضيء على جسمها يجعلها ملفتة للنظر. تعيش في مجموعات وتحتاج إلى مياه نقية ودرجة حرارة بين 20-26 درجة مئوية.",
+    "featured": true,
+    "image": "https://images.pexels.com/photos/3432803/pexels-photo-3432803.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 25,
+    "clerkId": "seller127"
+  },
+  {
+    "name": "سمكة البلاك موور",
+    "company": "Black Moor",
+    "description": "نوع من أسماك الزينة الذهبية يتميز بلونه الأسود وعينيه الكبيرتين. تعيش في المياه العذبة وتحتاج إلى مساحة واسعة للسباحة.",
+    "featured": false,
+    "image": "https://images.pexels.com/photos/4365566/pexels-photo-4365566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 60,
+    "clerkId": "seller128"
+  },
+  {
+    "name": "سمكة السيامي المقاتلة",
+    "company": "Betta Fish",
+    "description": "تُعرف بألوانها الزاهية وزعانفها الطويلة. تُعتبر من الأسماك الفردية وتحتاج إلى بيئة منفصلة بسبب طبيعتها القتالية.",
+    "featured": true,
+    "image": "https://images.pexels.com/photos/5150078/pexels-photo-5150078.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 40,
+    "clerkId": "seller129"
+  },
+  {
+    "name": "سمكة القرص",
+    "company": "Discus",
+    "description": "سمكة دائرية الشكل بألوان مذهلة، وتعتبر من أسماك الزينة الهادئة. تحتاج إلى عناية خاصة ومياه بدرجة حرارة 27-30 درجة مئوية.",
+    "featured": false,
+    "image": "https://images.pexels.com/photos/4139587/pexels-photo-4139587.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 100,
+    "clerkId": "seller130"
   }
 ]

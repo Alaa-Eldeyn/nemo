@@ -29,18 +29,18 @@ function CheckoutContent() {
   const options = { fetchClientSecret };
 
   return (
+    <div id="checkout">
       <EmbeddedCheckoutProvider stripe={stripePromise} options={options}>
         <EmbeddedCheckout />
       </EmbeddedCheckoutProvider>
+    </div>
   );
 }
 
 export default function CheckoutPage() {
   return (
-    <div id="checkout">
-      <Suspense fallback={<div>جارى التحميل...</div>}>
-        <CheckoutContent />
-      </Suspense>
-    </div>
+    <Suspense fallback={<div>جارى التحميل...</div>}>
+      <CheckoutContent />
+    </Suspense>
   );
 }

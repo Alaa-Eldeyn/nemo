@@ -5,7 +5,7 @@ import HeroCarousel from "./HeroCarousel";
 function Hero() {
   return (
     <section className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-      <div>
+      <div className="z-20">
         <h1 className="max-w-2xl text-orange-600 font-black text-4xl tracking-tight sm:text-6xl font-tajawal">
           السمك صحاب
           <br />
