@@ -12,12 +12,11 @@ const stripePromise = loadStripe(
   process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string
 );
 
-export default function CheckoutPage() {
+function CheckoutContent() {
   const searchParams = useSearchParams();
 
   const orderId = searchParams.get("orderId");
   const cartId = searchParams.get("cartId");
-  console.log(orderId, cartId);
 
   const fetchClientSecret = useCallback(async () => {
     const response = await axios.post("/api/payment", {
@@ -30,12 +29,20 @@ export default function CheckoutPage() {
   const options = { fetchClientSecret };
 
   return (
-    <Suspense>
-      <div id="checkout">
-        <EmbeddedCheckoutProvider stripe={stripePromise} options={options}>
-          <EmbeddedCheckout />
-        </EmbeddedCheckoutProvider>
-      </div>
-    </Suspense>
+    <div id="checkout">
+      <EmbeddedCheckoutProvider stripe={stripePromise} options={options}>
+        <EmbeddedCheckout />
+      </EmbeddedCheckoutProvider>
+    </div>
+  );
+}
+
+export default function CheckoutPage() {
+  return (
+    <div id="checkout">
+      <Suspense fallback={<div>جارى التحميل...</div>}>
+        <CheckoutContent />
+      </Suspense>
+    </div>
   );
 }
